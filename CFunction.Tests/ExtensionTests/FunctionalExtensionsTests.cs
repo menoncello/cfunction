@@ -1,7 +1,7 @@
 ﻿using System;
 using Xunit;
 
-namespace CFunction.Tests.Extensions
+namespace CFunction.Tests.ExtensionTests
 {
   public class FunctionalExtensionsTests
   {

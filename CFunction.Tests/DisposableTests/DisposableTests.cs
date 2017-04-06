@@ -1,8 +1,9 @@
 ﻿using System;
 using CFunction.Disposables;
+using CFunction.Tests.Disposables;
 using Xunit;
 
-namespace CFunction.Tests.Disposables
+namespace CFunction.Tests.DisposableTests
 {
     public class DisposableTests
     {

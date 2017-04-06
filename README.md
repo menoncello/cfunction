@@ -4,8 +4,16 @@ Functional Programming for C# in .Net Core. Based in [Functional C#: Fluent Inte
 
 ## Functional Methods
 
-### Tee
+### - Tee
 The Tee extension method takes it’s name from the corresponding UNIX command which is used in command pipelines to cause a side-effect with a given input and return the original value. Here, our side-effect is populating a byte array but we could just as easily use Tee for logging or anything else for that matter.
+```c#
+Console.WriteLine(123.Tee(x => Console.WriteLine(x)));
+// 123
+// 123
+```
+
+### - Map
+Maps a object to other object, by a function.
 ```c#
 Console.WriteLine(123.Tee(x => Console.WriteLine(x)));
 // 123
@@ -14,8 +22,8 @@ Console.WriteLine(123.Tee(x => Console.WriteLine(x)));
 
 ## Disposables
 
-### Using
-Execute using method, without usiasdng enclosure.
+### - Using
+Execute using method, without using enclosure.
 ```c#
 // Before
 using (var reader = new StreamReader(stream)) {

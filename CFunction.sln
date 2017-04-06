@@ -7,11 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFunction", "CFunction\CFun
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFunction.Tests", "CFunction.Tests\CFunction.Tests.csproj", "{9C9285CA-C293-4B62-828F-B24E14A68178}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{1F63AABD-AF52-4E6F-8782-92FF5DA9AD37}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{56A42E71-EC05-431A-8157-0FEEEB7B84DB}"
 ProjectSection(SolutionItems) = preProject
 	.gitignore = .gitignore
-	README.md = README.md
 	LICENSE = LICENSE
+	README.md = README.md
 EndProjectSection
 EndProject
 Global

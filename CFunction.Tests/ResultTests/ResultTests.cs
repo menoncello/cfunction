@@ -20,6 +20,7 @@ namespace CFunction.Tests.ResultTests
     #endregion
 
     #region FailWith
+
     [Fact]
     public void FailWith__Should_returns_a_Result_type() =>
       Assert.IsAssignableFrom<Result<int, string>>(Result<int, string>.FailWith("1"));
@@ -31,6 +32,27 @@ namespace CFunction.Tests.ResultTests
     [Fact]
     public void FailWith__Should_returns_the_IsSuccess_as_true() =>
       Assert.False(Result<int, string>.FailWith("1").IsSuccess);
+
+    #endregion
+
+    #region Bind
+
+    [Fact]
+    public void Bind__Should_execute_method_if_the_result_has_succeed()
+    {
+      var calls = 0;
+      Result<int, string>.SucceedWith(1).Bind(x => Result<int, string>.SucceedWith(calls++));
+      Assert.Equal(1, calls);
+    }
+
+    [Fact]
+    public void Bind__Should_not_execute_method_if_the_result_has_fail()
+    {
+      var calls = 0;
+      Result<int, string>.FailWith("fail").Bind(x => Result<int, string>.SucceedWith(calls++));
+      Assert.Equal(0, calls);
+    }
+
     #endregion
   }
 }

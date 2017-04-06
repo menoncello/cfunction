@@ -50,6 +50,13 @@ Result<int, string>.FailWith('fail');
 //  }
 ```
 
+### - Bind(function) => `Result`
+Execute the function if the result is succeed
+```c#
+Result<int, string>.Success(123)
+    .Bind(x => Promise.SucceedWith(321));
+```
+
 ## Disposables
 
 ### - Using(constructor, function) => `Returns the result of function`

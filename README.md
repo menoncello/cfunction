@@ -20,6 +20,14 @@ Console.WriteLine(123.Tee(x => Console.WriteLine(x)));
 // 123
 ```
 
+### - When
+Execute the method when the condition is true.
+```c#
+123.When(x => x == 123, x => 123 + 50) // returns 173;
+// or
+123.When(true, x => 123 + 50) // also returns 173;
+```
+
 ## Disposables
 
 ### - Using
